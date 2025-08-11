@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VT Mart – Seller KYC</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <script src="../data/products.js"></script>
+    <script src="../js/app.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="nav">
+        <a href="../index.html">VT Mart</a>
+        <div>
+          <a href="../index.html">Home</a>
+          <a href="../cart.html">Cart</a>
+          <a href="index.html">Admin</a>
+        </div>
+      </div>
+    </header>
+    <main class="container">
+      <h2>Seller KYC</h2>
+      <form onsubmit="handleKycSubmit(event)">
+        <label for="pan">PAN</label>
+        <input type="text" id="pan" name="pan" required />
+        <label for="gstin">GSTIN</label>
+        <input type="text" id="gstin" name="gstin" required />
+        <label for="bankAccount">Bank Account Number</label>
+        <input type="text" id="bankAccount" name="bankAccount" required />
+        <label for="bankIfsc">Bank IFSC</label>
+        <input type="text" id="bankIfsc" name="bankIfsc" required />
+        <label for="address">Registered Address</label>
+        <textarea id="address" name="address" required></textarea>
+        <label for="identityDocument">Identity Document (PDF/JPG)</label>
+        <input type="file" id="identityDocument" name="identityDocument" accept="application/pdf,image/*" />
+        <label for="cancelledCheque">Cancelled Cheque (PDF/JPG)</label>
+        <input type="file" id="cancelledCheque" name="cancelledCheque" accept="application/pdf,image/*" />
+        <button class="btn" type="submit">Submit KYC</button>
+      </form>
+    </main>
+  </body>
+</html>
